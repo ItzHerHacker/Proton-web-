@@ -1,0 +1,1 @@
+9999999999{"name": "hpack", "version": "4.0.0", "summary": "Pure-Python HPACK header compression", "platform": "", "requires_dist": null, "requires_python": ">=3.6.1", "files": [], "_cache_version": "1.0.0"}

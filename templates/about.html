@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>About - Proton</title>
+    {% extends "template.html" %}
+    {% block content %}
+</head>
+
+<body>
+    <section class="main-content" style="margin-top: 2em;">
+        <h1>About Pennywise</h1>
+        <p>Beginning Of My Coding Practises Before Some Months <br><br>
+            This is my first multipurpose bot name `Proton` with my partner Rao <br><br>
+            Have You Ever Seen My First Bot Named : MEGA 2.0
+          <br><br> Rao is my oldest of all friend and No time came that we fought . Hope our bond will remain like this.<br><br>
+            <br>
+            At the early times i started practising with the github codes and then when some errors comes i wont understand at all , i even took help with my friends . Slowly and Deeply i learned to install modules. First module i installed as i remember was `pip install discord` . After learning how to install modules then i have a great interest on learning how to fixed the errors like in embed and all . I slowly tried to learn of fixing errors . Now itz time to learn how to make embed , i have a great interest of learning embeds and edit it professionally . This make me feel very happy , when i learned how to make embeds.
+            <br>
+            As the time flew up , My first project was MEGA bot , i reached MEGA's first 200K + users and 100 servers but the growth was inorganic , I wont tried failure . 
+          My first verified bot was Titianium , whom i worked with my old friend.
+          My Life goes on like this....!!
+          Thank You
+
+        </p>
+          <h1>About Rao</h1>
+        <p>I started my coding journey on 6th October 2022. <br><br>
+            I started with making custom commands for some bot at the
+            start and I really liked that. So I switched over to coding a bot in a real programming language myself:
+            Proton. <br><br>
+            Did you know at first I named it 'xsecurity'?
+            <br><br>
+            At the beginning everything was
+            soooo hard... a SyntaxError would hold me for hours, could not solve NameErrors and only 10% of the code I
+            wrote was from myself. See a
+            little preview below.
+            That's why I decided to go learn Python first before making a discord bot. After hundred of hours of YouTube
+            tutorials I finally understood most of what I wrote. I agree that it wasn't the best start, but I survived!
+            <br><br>
+            After two months or so, I wrote my own subclasses and started using SQLite3. <br> Never stop trying!
+
+        </p>
+        <h1>Our First Practise Code</h1>
+        <pre><code>import discord
+from discord.ext import commands
+
+client = commands.Bot(prefix="!")
+
+token = "" 
+          
+@client.command()
+async def command(ctx):
+    await ctx.send("Hello World")
+
+
+### WHILE AS THIS THIS , WE ARE LEARNING ABOUT ENVIRON          
+@client.event
+async def on_ready():
+      print("Test")
+
+client.run(token)
+</code></pre>
+        <p><em>This is how our code looked like at the beginning (and yes we named bot client cause we didn't know)</em>
+        </p>
+    </section>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="1ZL-vuOLAgjIHA6x_MCzjsNQQUetmT00dJUgTag-Yzo" />
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/msgbox.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/support.css') }}">
+  <link rel=stylesheet href="{{ url_for('static', filename = 'css/highlight/styles/atom-one-dark-reasonable.css') }}">
+  </link>
+  <script src="{{ url_for('static', filename = 'css/highlight/highlight.pack.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'css/mark.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/msgbox.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/support.js') }}"></script>
+  <script src="https://kit.fontawesome.com/ed4599c3e0.js" crossorigin="anonymous"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="icon" href="https://cdn.discordapp.com/avatars/1027428088562319391/9cf546646fcd8b81a108fd7b24c3e732.png?size=1024">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Proton" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://home.protonbot.tk" />
+  <meta property="og:image" content="https://cdn.discordapp.com/avatars/1027428088562319391/9cf546646fcd8b81a108fd7b24c3e732.png?size=1024" />
+  <meta property="og:description" content="A Multipurpose discord bot" />
+  <meta name="theme-color" content="#2F3136">
+</head>
+
+<body>
+  <button class="backToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+  <section class="navbar">
+    <ul class=navbar-contents>
+      <a href="{{ url_for('home') }}" class="btn"><i class="fas fa-home"></i> Home</a>
+      <a href="{{ url_for('support') }}" class="btn"><i class="fas fa-ticket-alt"></i> Support</a>
+      <a href="{{ url_for('about') }}" class="btn"><i class="fas fa-address-card"></i> About me</a>
+      <a href="{{ url_for('stats') }}" class="btn"><i class="fas fa-server"></i> Statistics</a>
+      <li style="float:right;margin-right:1em;">
+        <input id=searchBar class="searchbar btn show" autocomplete="off" type="text" name="search"
+          placeholder="Search..">
+        <button id=showSearch class="btn show">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="https://discord.gg/proton" target="_blank" alt="Groot Support Server" class="btn"
+          style=border-radius:50%>
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://github.com/rao2002" target="_blank" class="btn">
+          <i class="fas fa-code"></i>
+          Source
+        </a>
+        <button class="btn" id="theme-switcher">
+          <i class="fas fa-moon"></i>
+          Switch theme
+        </button>
+        {% if user %}
+        <a href="/api/logout" onclick="return confirm('Are you sure you want to logout?')" class="btn" id="userName">
+          {{ user }}
+        </a>
+        {% else %}
+        <a href="/api/login" class="btn">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        {% endif %}
+      </li>
+    </ul>
+  </section>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+9999999999{"name": "Quart-Discord", "version": "2.1.4", "summary": "Discord OAuth2 extension for Quart.", "platform": "any", "requires_dist": ["Async-OAuthlib", "Quart", "cachetools", "discord.py", "oauthlib", "pyjwt"], "requires_python": null, "files": [], "_cache_version": "1.0.0"}
